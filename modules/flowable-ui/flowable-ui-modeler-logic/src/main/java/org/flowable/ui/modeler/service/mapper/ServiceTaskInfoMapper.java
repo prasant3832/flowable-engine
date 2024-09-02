@@ -37,6 +37,9 @@ public class ServiceTaskInfoMapper extends AbstractInfoMapper {
         if (ServiceTask.HTTP_TASK.equalsIgnoreCase(serviceTask.getType())) {
             createPropertyNode("Type", "Http task");
         }
+        if (ServiceTask.G4_CUSTOM_TASK.equalsIgnoreCase(serviceTask.getType())) {
+            createPropertyNode("Type", "G4 Custom task");
+        }
         createPropertyNode("Result variable name", serviceTask.getResultVariableName());
         createFieldPropertyNodes("Field extensions", serviceTask.getFieldExtensions());
         createListenerPropertyNodes("Execution listeners", serviceTask.getExecutionListeners());

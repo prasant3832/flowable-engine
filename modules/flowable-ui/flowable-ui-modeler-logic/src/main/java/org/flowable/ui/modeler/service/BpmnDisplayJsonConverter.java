@@ -234,6 +234,8 @@ public class BpmnDisplayJsonConverter {
 
                     } else if (ServiceTask.HTTP_TASK.equals(serviceTask.getType())) {
                         elementNode.put("taskType", "http");
+                    } else if (ServiceTask.G4_CUSTOM_TASK.equals(serviceTask.getType())) {
+                        elementNode.put("taskType", "g4-custom");
                     } else if (ServiceTask.SHELL_TASK.equals(serviceTask.getType())) {
                         elementNode.put("taskType", "shell");
                     }

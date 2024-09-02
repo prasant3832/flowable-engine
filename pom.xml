@@ -8,7 +8,7 @@
 	<artifactId>flowable-root</artifactId>
 
 	<packaging>pom</packaging>
-	<version>6.8.0</version>
+	<version>6.8.0.34</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<distributionManagementSnapshotsUrl>https://oss.sonatype.org/content/repositories/snapshots/</distributionManagementSnapshotsUrl>
@@ -692,6 +692,11 @@
 			<dependency>
 				<groupId>org.flowable</groupId>
 				<artifactId>flowable-http</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.flowable</groupId>
+				<artifactId>flowable-g4-custom</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
@@ -1464,6 +1469,7 @@
 				<module>modules/flowable-cxf</module>
 				<module>modules/flowable-mule</module>
 				<module>modules/flowable-http</module>
+				<module>modules/flowable-g4-custom</module>
 				<module>modules/flowable-http-common</module>
 				<module>modules/flowable-camel</module>
 				<module>modules/flowable-camel-cdi</module>
@@ -1580,6 +1586,7 @@
 				<module>modules/flowable-content-spring-configurator</module>
 				<module>modules/flowable-content-rest</module>
                 <module>modules/flowable-http</module>
+				<module>modules/flowable-g4-custom</module>
                 <module>modules/flowable-http-common</module>
                 <module>modules/flowable-spring-boot</module>
 				<module>modules/flowable-jms-spring-executor</module>

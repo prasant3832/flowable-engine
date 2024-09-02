@@ -71,6 +71,9 @@ public class ServiceTaskValidator extends ExternalInvocationTaskValidator {
                 case ServiceTask.HTTP_TASK:
                     validateFieldDeclarationsForHttp(process, serviceTask, serviceTask.getFieldExtensions(), errors);
                     return;
+                case ServiceTask.G4_CUSTOM_TASK:
+                    validateFieldDeclarationsForG4Custom(process, serviceTask, serviceTask.getFieldExtensions(), errors);
+                    return;
                 case ServiceTask.CASE_TASK:
                     validateFieldDeclarationsForCase(process, (CaseServiceTask) serviceTask, errors);
                     return;

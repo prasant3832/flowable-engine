@@ -80,7 +80,7 @@ public class ScriptingEngines {
     }
 
     /**
-     * @deprecated since 6.8.0 use {@link #evaluate(ScriptEngineRequest)}.getResult()
+     * @deprecated since 6.8.0.34 use {@link #evaluate(ScriptEngineRequest)}.getResult()
      */
     @Deprecated
     public Object evaluate(String script, String language, VariableContainer variableContainer) {
@@ -88,7 +88,7 @@ public class ScriptingEngines {
     }
 
     /**
-     * @deprecated since 6.8.0 use {@link #evaluate(ScriptEngineRequest)}.getResult()
+     * @deprecated since 6.8.0.34 use {@link #evaluate(ScriptEngineRequest)}.getResult()
      */
     @Deprecated
     public Object evaluate(String script, String language, VariableContainer variableContainer, boolean storeScriptVariables) {

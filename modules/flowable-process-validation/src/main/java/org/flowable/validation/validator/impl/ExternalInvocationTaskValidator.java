@@ -107,6 +107,22 @@ public abstract class ExternalInvocationTaskValidator extends ProcessLevelValida
         }
     }
 
+    protected void validateFieldDeclarationsForG4Custom(org.flowable.bpmn.model.Process process, TaskWithFieldExtensions task, List<FieldExtension> fieldExtensions, List<ValidationError> errors) {
+        boolean jobIdAvailable = false;
+        for (FieldExtension fieldExtension : fieldExtensions) {
+            String fieldName = fieldExtension.getFieldName();
+            String fieldValue = fieldExtension.getStringValue();
+            String fieldExpression = fieldExtension.getExpression();
+
+            if ("jobId".equals(fieldName) && (StringUtils.isNotEmpty(fieldValue) || StringUtils.isNotEmpty(fieldExpression))) {
+                jobIdAvailable = true;
+            }
+        }
+        if(!jobIdAvailable) {
+            addError(errors, Problems.G4_CUSTOM_TASK_NO_JOB_ID, process, task, "No Job Id is found in the task activity");
+        }
+    }
+
     protected void validateFieldDeclarationsForHttp(org.flowable.bpmn.model.Process process, TaskWithFieldExtensions task, List<FieldExtension> fieldExtensions, List<ValidationError> errors) {
         boolean requestMethodDefined = false;
         boolean requestUrlDefined = false;

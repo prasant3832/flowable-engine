@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.flowable</groupId>
         <artifactId>flowable-ui-parent</artifactId>
-        <version>6.8.0</version>
+        <version>6.8.0.34</version>
     </parent>
     <name>Flowable - UI - APP</name>
     <artifactId>flowable-ui-app</artifactId>

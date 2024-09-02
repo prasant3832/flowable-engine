@@ -56,6 +56,7 @@ public interface StencilConstants {
     final String STENCIL_TASK_CAMEL = "CamelTask";
     final String STENCIL_TASK_MULE = "MuleTask";
     final String STENCIL_TASK_HTTP = "HttpTask";
+    final String STENCIL_TASK_G4_CUSTOM = "G4CustomTask";
     final String STENCIL_TASK_SEND_EVENT = "SendEventTask";
     final String STENCIL_TASK_EXTERNAL_WORKER = "ExternalWorkerTask";
     final String STENCIL_TASK_SHELL = "ShellTask";
@@ -323,6 +324,8 @@ public interface StencilConstants {
     final String PROPERTY_DECISIONTABLE_SAME_DEPLOYMENT_KEY = "sameDeployment";
     final String PROPERTY_DECISION_REFERENCE_TYPE = "decisionReferenceType";
 
+
+    final String PROPERTY_G4CUSTOM_TASK_JOB_ID = "g4customtaskjobid";
 
     final String PROPERTY_HTTPTASK_REQ_METHOD = "httptaskrequestmethod";
     final String PROPERTY_HTTPTASK_REQ_URL = "httptaskrequesturl";

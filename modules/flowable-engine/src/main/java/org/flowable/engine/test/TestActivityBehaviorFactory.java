@@ -283,6 +283,11 @@ public class TestActivityBehaviorFactory extends AbstractBehaviorFactory impleme
     }
 
     @Override
+    public ActivityBehavior createG4CustomActivityBehavior(ServiceTask serviceTask) {
+        return wrappedActivityBehaviorFactory.createG4CustomActivityBehavior(serviceTask);
+    }
+
+    @Override
     public ActivityBehavior createBusinessRuleTaskActivityBehavior(BusinessRuleTask businessRuleTask) {
         return wrappedActivityBehaviorFactory.createBusinessRuleTaskActivityBehavior(businessRuleTask);
     }

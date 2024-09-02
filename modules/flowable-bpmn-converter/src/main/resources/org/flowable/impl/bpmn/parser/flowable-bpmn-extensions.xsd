@@ -242,6 +242,7 @@
       <restriction base="string">
         <enumeration value="camel"/>
         <enumeration value="http"/>
+        <enumeration value="g4-custom"/>
         <enumeration value="mail"/>
         <enumeration value="mule"/>
         <enumeration value="shell"/>

@@ -23,6 +23,7 @@ public class ServiceTask extends TaskWithFieldExtensions {
     public static final String DMN_TASK = "dmn";
     public static final String MAIL_TASK = "mail";
     public static final String HTTP_TASK = "http";
+    public static final String G4_CUSTOM_TASK = "g4-custom";
     public static final String SHELL_TASK = "shell";
     public static final String CASE_TASK = "case";
     public static final String SEND_EVENT_TASK = "send-event";

@@ -113,6 +113,8 @@ public abstract class BaseBpmnJsonConverter implements EditorJsonConstants, Sten
                 stencilId = STENCIL_TASK_MULE;
             } else if ("http".equalsIgnoreCase(serviceTask.getType())) {
                 stencilId = STENCIL_TASK_HTTP;
+            } else if ("g4-custom".equalsIgnoreCase(serviceTask.getType())) {
+                stencilId = STENCIL_TASK_G4_CUSTOM;
             } else if ("dmn".equalsIgnoreCase(serviceTask.getType())) {
                 stencilId = STENCIL_TASK_DECISION;
             } else if ("shell".equalsIgnoreCase(serviceTask.getType())) {

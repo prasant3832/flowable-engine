@@ -53,6 +53,7 @@ flowable-form-rest<version><.jar | -source.jar | -javadoc.jar>
 flowable-form-spring<version><.jar | -source.jar | -javadoc.jar>
 flowable-form-spring-configurator<version><.jar | -source.jar | -javadoc.jar>
 flowable-http<version><.jar | -source.jar | -javadoc.jar>
+flowable-g4-custom<version><.jar | -source.jar | -javadoc.jar>
 flowable-image-generator<version><.jar | -source.jar | -javadoc.jar>
 flowable-jms-spring-executor<version><.jar | -source.jar | -javadoc.jar>
 flowable-jmx<version><.jar | -source.jar | -javadoc.jar>

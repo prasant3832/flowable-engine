@@ -31,6 +31,7 @@ import org.flowable.common.engine.impl.cfg.BeansConfigurationHelper;
 import org.flowable.common.engine.impl.cfg.mail.MailServerInfo;
 import org.flowable.common.engine.impl.history.HistoryLevel;
 import org.flowable.common.engine.impl.runtime.Clock;
+import org.flowable.engine.cfg.G4CustomConfig;
 import org.flowable.engine.cfg.HttpClientConfig;
 import org.flowable.engine.impl.cfg.StandaloneInMemProcessEngineConfiguration;
 import org.flowable.engine.impl.cfg.StandaloneProcessEngineConfiguration;
@@ -107,6 +108,7 @@ public abstract class ProcessEngineConfiguration extends AbstractEngineConfigura
 
     // Set Http Client config defaults
     protected HttpClientConfig httpClientConfig = new HttpClientConfig();
+    protected G4CustomConfig g4CustomConfig = new G4CustomConfig();
 
     protected HistoryLevel historyLevel;
     protected boolean enableProcessDefinitionHistoryLevel;
@@ -383,6 +385,14 @@ public abstract class ProcessEngineConfiguration extends AbstractEngineConfigura
 
     public void setHttpClientConfig(HttpClientConfig httpClientConfig) {
         this.httpClientConfig.merge(httpClientConfig);
+    }
+
+    public G4CustomConfig getG4CustomConfig() {
+        return g4CustomConfig;
+    }
+
+    public void setG4CustomConfig(G4CustomConfig g4CustomConfig) {
+        this.g4CustomConfig = g4CustomConfig;
     }
 
     @Override

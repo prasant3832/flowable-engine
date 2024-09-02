@@ -57,6 +57,9 @@ public class ServiceTaskParseHandler extends AbstractActivityBpmnParseHandler<Se
             } else if ("http".equalsIgnoreCase(serviceTask.getType())) {
                 serviceTask.setBehavior(bpmnParse.getActivityBehaviorFactory().createHttpActivityBehavior(serviceTask));
 
+            } else if (ServiceTask.G4_CUSTOM_TASK.equalsIgnoreCase(serviceTask.getType())) {
+                serviceTask.setBehavior(bpmnParse.getActivityBehaviorFactory().createG4CustomActivityBehavior(serviceTask));
+
             } else if (ImplementationType.IMPLEMENTATION_TYPE_DELEGATEEXPRESSION.equalsIgnoreCase(serviceTask.getImplementationType())) {
                 serviceTask.setBehavior(bpmnParse.getActivityBehaviorFactory().createServiceTaskDelegateExpressionActivityBehavior(serviceTask));
                 

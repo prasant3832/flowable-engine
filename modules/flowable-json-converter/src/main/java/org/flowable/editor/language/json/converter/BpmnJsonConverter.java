@@ -107,6 +107,7 @@ public class BpmnJsonConverter implements EditorJsonConstants, StencilConstants,
         CamelTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
         MuleTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
         HttpTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
+        G4CustomTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
         SendTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
         DecisionTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
         SendEventTaskJsonConverter.fillTypes(convertersToBpmnMap, convertersToJsonMap);
@@ -199,6 +200,7 @@ public class BpmnJsonConverter implements EditorJsonConstants, StencilConstants,
         DI_RECTANGLES.add(STENCIL_TASK_CAMEL);
         DI_RECTANGLES.add(STENCIL_TASK_MULE);
         DI_RECTANGLES.add(STENCIL_TASK_HTTP);
+        DI_RECTANGLES.add(STENCIL_TASK_G4_CUSTOM);
         DI_RECTANGLES.add(STENCIL_TASK_DECISION);
         DI_RECTANGLES.add(STENCIL_TASK_SEND_EVENT);
         DI_RECTANGLES.add(STENCIL_TASK_EXTERNAL_WORKER);

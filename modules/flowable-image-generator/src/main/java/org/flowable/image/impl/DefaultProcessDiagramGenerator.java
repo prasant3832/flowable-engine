@@ -241,7 +241,9 @@ public class DefaultProcessDiagramGenerator implements ProcessDiagramGenerator {
                     processDiagramCanvas.drawMuleTask(serviceTask.getName(), graphicInfo, scaleFactor);
                 } else if (ServiceTask.HTTP_TASK.equalsIgnoreCase(serviceTask.getType())) {
                     processDiagramCanvas.drawHttpTask(serviceTask.getName(), graphicInfo, scaleFactor);
-                } else if (ServiceTask.DMN_TASK.equalsIgnoreCase(serviceTask.getType())) {
+                } else if (ServiceTask.G4_CUSTOM_TASK.equalsIgnoreCase(serviceTask.getType())) {
+                    processDiagramCanvas.drawG4CustomTask(serviceTask.getName(), graphicInfo, scaleFactor);
+                }else if (ServiceTask.DMN_TASK.equalsIgnoreCase(serviceTask.getType())) {
                     processDiagramCanvas.drawDMNTask(serviceTask.getName(), graphicInfo, scaleFactor);
                 } else if (ServiceTask.SHELL_TASK.equalsIgnoreCase(serviceTask.getType())) {
                     processDiagramCanvas.drawShellTask(serviceTask.getName(), graphicInfo, scaleFactor);

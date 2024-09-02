@@ -176,6 +176,7 @@ public interface ActivityBehaviorFactory {
     ActivityBehavior createDmnActivityBehavior(SendTask sendTask);
 
     ActivityBehavior createHttpActivityBehavior(ServiceTask serviceTask);
+    ActivityBehavior createG4CustomActivityBehavior(ServiceTask serviceTask);
 
     ShellActivityBehavior createShellActivityBehavior(ServiceTask serviceTask);
 

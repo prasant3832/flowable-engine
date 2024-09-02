@@ -342,6 +342,37 @@ public class DefaultActivityBehaviorFactory extends AbstractBehaviorFactory impl
     }
 
     @Override
+    public ActivityBehavior createG4CustomActivityBehavior(ServiceTask serviceTask) {
+        try {
+            Class<?> theClass = null;
+            FieldExtension behaviorExtension = null;
+            for (FieldExtension fieldExtension : serviceTask.getFieldExtensions()) {
+                if ("G4CustomActivityBehaviorClass".equals(fieldExtension.getFieldName()) && StringUtils.isNotEmpty(fieldExtension.getStringValue())) {
+                    theClass = Class.forName(fieldExtension.getStringValue());
+                    behaviorExtension = fieldExtension;
+                    break;
+                }
+            }
+
+            if (behaviorExtension != null) {
+                serviceTask.getFieldExtensions().remove(behaviorExtension);
+            }
+
+            List<FieldDeclaration> fieldDeclarations = createFieldDeclarations(serviceTask.getFieldExtensions());
+            addExceptionMapAsFieldDeclaration(fieldDeclarations, serviceTask.getMapExceptions());
+
+            if (theClass == null) {
+                return (ActivityBehavior) ClassDelegate.defaultInstantiateDelegate(
+                        ShellActivityBehavior.class, fieldDeclarations);
+            }
+            return (ActivityBehavior) ClassDelegate.defaultInstantiateDelegate(theClass, fieldDeclarations);
+
+        } catch (ClassNotFoundException e) {
+            throw new FlowableException("Could not find org.flowable.g4_custom.G4CustomActivityBehavior: ", e);
+        }
+    }
+
+    @Override
     public ActivityBehavior createHttpActivityBehavior(ServiceTask serviceTask) {
         try {
             Class<?> theClass = null;

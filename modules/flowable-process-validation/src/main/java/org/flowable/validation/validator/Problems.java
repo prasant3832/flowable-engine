@@ -62,6 +62,8 @@ public interface Problems {
 
     String HTTP_TASK_NO_REQUEST_URL = "flowable-httptask-no-request-url";
     String HTTP_TASK_NO_REQUEST_METHOD = "flowable-httptask-no-request-method";
+
+    String G4_CUSTOM_TASK_NO_JOB_ID = "flowable-g4-custom-task-no-job-id";
     
     String CASE_TASK_NO_CASE_DEFINITION_KEY = "flowable-casetask-no-case-definition-key";
     
