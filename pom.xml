@@ -1728,6 +1728,7 @@
 				<module>modules/flowable-camel</module>
 				<module>modules/flowable-mule</module>
 				<module>modules/flowable-http</module>
+				<module>modules/flowable-g4-custom</module>
 				<module>modules/flowable-http-common</module>
 				<module>modules/flowable-cdi</module>
 				<module>modules/flowable-cmmn-cdi</module>

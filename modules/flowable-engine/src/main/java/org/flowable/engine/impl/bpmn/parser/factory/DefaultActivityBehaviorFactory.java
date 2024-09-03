@@ -128,6 +128,7 @@ import org.flowable.engine.impl.bpmn.helper.ClassDelegate;
 import org.flowable.engine.impl.bpmn.helper.ClassDelegateFactory;
 import org.flowable.engine.impl.bpmn.helper.DefaultClassDelegateFactory;
 import org.flowable.engine.impl.bpmn.http.DefaultBpmnHttpActivityDelegate;
+import org.flowable.engine.impl.bpmn.http.DefaultG4CustomActivityBehaviour;
 import org.flowable.engine.impl.bpmn.parser.FieldDeclaration;
 import org.flowable.engine.impl.cfg.ProcessEngineConfigurationImpl;
 import org.flowable.engine.impl.delegate.ActivityBehavior;
@@ -362,10 +363,14 @@ public class DefaultActivityBehaviorFactory extends AbstractBehaviorFactory impl
             addExceptionMapAsFieldDeclaration(fieldDeclarations, serviceTask.getMapExceptions());
 
             if (theClass == null) {
-                return (ActivityBehavior) ClassDelegate.defaultInstantiateDelegate(
-                        ShellActivityBehavior.class, fieldDeclarations);
+                return classDelegateFactory.create(serviceTask.getId(),
+                        DefaultG4CustomActivityBehaviour.class.getName(),
+                        createFieldDeclarations(serviceTask.getFieldExtensions()), serviceTask.isTriggerable(),
+                        getSkipExpressionFromServiceTask(serviceTask), serviceTask.getMapExceptions());
             }
-            return (ActivityBehavior) ClassDelegate.defaultInstantiateDelegate(theClass, fieldDeclarations);
+            return classDelegateFactory.create(serviceTask.getId(), theClass.getName(),
+                    createFieldDeclarations(serviceTask.getFieldExtensions()), serviceTask.isTriggerable(),
+                    getSkipExpressionFromServiceTask(serviceTask), serviceTask.getMapExceptions());
 
         } catch (ClassNotFoundException e) {
             throw new FlowableException("Could not find org.flowable.g4_custom.G4CustomActivityBehavior: ", e);
