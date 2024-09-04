@@ -109,17 +109,26 @@ public abstract class ExternalInvocationTaskValidator extends ProcessLevelValida
 
     protected void validateFieldDeclarationsForG4Custom(org.flowable.bpmn.model.Process process, TaskWithFieldExtensions task, List<FieldExtension> fieldExtensions, List<ValidationError> errors) {
         boolean jobIdAvailable = false;
+        boolean jobIdVariableAvailable = false;
         for (FieldExtension fieldExtension : fieldExtensions) {
             String fieldName = fieldExtension.getFieldName();
             String fieldValue = fieldExtension.getStringValue();
             String fieldExpression = fieldExtension.getExpression();
 
-            if ("jobId".equals(fieldName) && (StringUtils.isNotEmpty(fieldValue) || StringUtils.isNotEmpty(fieldExpression))) {
+            if (Problems.PROPERTY_G4CUSTOM_TASK_JOB_ID.equals(fieldName) && (StringUtils.isNotEmpty(fieldValue) || StringUtils.isNotEmpty(fieldExpression))) {
                 jobIdAvailable = true;
+            }
+
+            if (Problems.PROPERTY_G4CUSTOM_TASK_JOB_ID_VARIABLE.equals(fieldName) && (StringUtils.isNotEmpty(fieldValue) || StringUtils.isNotEmpty(fieldExpression))) {
+                jobIdVariableAvailable = true;
             }
         }
         if(!jobIdAvailable) {
             addError(errors, Problems.G4_CUSTOM_TASK_NO_JOB_ID, process, task, "No Job Id is found in the task activity");
+        }
+
+        if(!jobIdVariableAvailable) {
+            addError(errors, Problems.G4_CUSTOM_TASK_NO_JOB_ID_VARIABLE, process, task, "Give a variable name for job id");
         }
     }
 

@@ -13,7 +13,8 @@ public class DefaultG4CustomActivityBehaviour extends AbstractBpmnActivityBehavi
     private static final long serialVersionUID = 1L;
     private static final Logger log = LoggerFactory.getLogger(DefaultG4CustomActivityBehaviour.class);
 
-    private Expression jobId;
+    private Expression g4CustomTaskJobId;
+    private Expression g4CustomTaskJobIdVariable;
 
     public static final String G4_CUSTOM_JOB_ID_REQUIRED = "G4 Custom Job Id required";
 
@@ -30,8 +31,10 @@ public class DefaultG4CustomActivityBehaviour extends AbstractBpmnActivityBehavi
     @Override
     public void execute(DelegateExecution execution) {
         try {
-            String customJobId = getStringFromField(jobId, execution);
-            log.info("Processing the job : {}", customJobId);
+            String customJobId = getStringFromField(g4CustomTaskJobId, execution);
+            String customJobIdVariable = getStringFromField(g4CustomTaskJobIdVariable, execution);
+            execution.setVariable(customJobIdVariable, customJobId);
+            log.info("Processing the job : {}. And, creating a variable for {}", customJobId, customJobIdVariable);
             if(StringUtils.isEmpty(customJobId)) {
                 throw new FlowableException(G4_CUSTOM_JOB_ID_REQUIRED);
             }

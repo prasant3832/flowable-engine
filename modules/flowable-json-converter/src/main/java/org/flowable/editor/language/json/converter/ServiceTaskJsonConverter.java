@@ -140,8 +140,9 @@ public class ServiceTaskJsonConverter extends BaseBpmnJsonConverter {
                 setPropertyValue(PROPERTY_HTTPTASK_PARALLEL_IN_SAME_TRANSACTION, parallelInSameTransaction.toString(), propertiesNode);
             }
 
-        } else if ("g4-custom".equalsIgnoreCase(serviceTask.getType())) {
-            setPropertyFieldValue(PROPERTY_G4CUSTOM_TASK_JOB_ID, "jobId", serviceTask, propertiesNode);
+        } else if (ServiceTask.G4_CUSTOM_TASK.equalsIgnoreCase(serviceTask.getType())) {
+            setPropertyFieldValue(PROPERTY_G4CUSTOM_TASK_JOB_ID, PROPERTY_G4CUSTOM_TASK_JOB_ID, serviceTask, propertiesNode);
+            setPropertyFieldValue(PROPERTY_G4CUSTOM_TASK_JOB_ID_VARIABLE, PROPERTY_G4CUSTOM_TASK_JOB_ID_VARIABLE, serviceTask, propertiesNode);
 
         } else if ("shell".equalsIgnoreCase(serviceTask.getType())) {
             setPropertyFieldValue(PROPERTY_SHELLTASK_COMMAND, "command", serviceTask, propertiesNode);

@@ -1,4 +1,4 @@
-package org.flowable.g4_custom;
+package org.flowable.g4.custom;
 
 import org.apache.commons.lang3.StringUtils;
 import org.flowable.common.engine.api.FlowableException;

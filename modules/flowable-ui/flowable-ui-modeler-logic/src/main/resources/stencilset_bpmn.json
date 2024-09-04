@@ -849,11 +849,21 @@
     }, {
       "name" : "g4customtaskjobidpackage",
       "properties" : [ {
-        "id" : "g4customtaskjobid",
+        "id" : "g4CustomTaskJobId",
         "type" : "String",
         "title" : "Job Id",
         "value" : "",
         "description" : "Job Id of the G4 Custom task to execute",
+        "popular" : true
+      } ]
+    }, {
+      "name" : "g4customtaskjobidvariablepackage",
+      "properties" : [ {
+        "id" : "g4CustomTaskJobIdVariable",
+        "type" : "String",
+        "title" : "Job Id Variable",
+        "value" : "",
+        "description" : "Variable to keep the job id value in process variables",
         "popular" : true
       } ]
     }, {
@@ -1894,7 +1904,7 @@
     "view" : "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\r\n<svg\r\n   xmlns=\"http:\/\/www.w3.org\/2000\/svg\"\r\n   xmlns:svg=\"http:\/\/www.w3.org\/2000\/svg\"\r\n   xmlns:oryx=\"http:\/\/www.b3mn.org\/oryx\"\r\n   xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\"\r\n\r\n   width=\"102\"\r\n   height=\"82\"\r\n   version=\"1.0\">\r\n  <defs><\/defs>\r\n  <oryx:magnets>\r\n  \t<oryx:magnet oryx:cx=\"1\" oryx:cy=\"20\" oryx:anchors=\"left\" \/>\r\n  \t<oryx:magnet oryx:cx=\"1\" oryx:cy=\"40\" oryx:anchors=\"left\" \/>\r\n  \t<oryx:magnet oryx:cx=\"1\" oryx:cy=\"60\" oryx:anchors=\"left\" \/>\r\n  \t\r\n  \t<oryx:magnet oryx:cx=\"25\" oryx:cy=\"79\" oryx:anchors=\"bottom\" \/>\r\n  \t<oryx:magnet oryx:cx=\"50\" oryx:cy=\"79\" oryx:anchors=\"bottom\" \/>\r\n  \t<oryx:magnet oryx:cx=\"75\" oryx:cy=\"79\" oryx:anchors=\"bottom\" \/>\r\n  \t\r\n  \t<oryx:magnet oryx:cx=\"99\" oryx:cy=\"20\" oryx:anchors=\"right\" \/>\r\n  \t<oryx:magnet oryx:cx=\"99\" oryx:cy=\"40\" oryx:anchors=\"right\" \/>\r\n  \t<oryx:magnet oryx:cx=\"99\" oryx:cy=\"60\" oryx:anchors=\"right\" \/>\r\n  \t\r\n  \t<oryx:magnet oryx:cx=\"25\" oryx:cy=\"1\" oryx:anchors=\"top\" \/>\r\n  \t<oryx:magnet oryx:cx=\"50\" oryx:cy=\"1\" oryx:anchors=\"top\" \/>\r\n  \t<oryx:magnet oryx:cx=\"75\" oryx:cy=\"1\" oryx:anchors=\"top\" \/>\r\n  \t\r\n  \t<oryx:magnet oryx:cx=\"50\" oryx:cy=\"40\" oryx:default=\"yes\" \/>\r\n  <\/oryx:magnets>\r\n  <g pointer-events=\"fill\" oryx:minimumSize=\"50 40\">\r\n\t<rect id=\"text_frame\" oryx:anchors=\"bottom top right left\" x=\"1\" y=\"1\" width=\"94\" height=\"79\" rx=\"10\" ry=\"10\" stroke=\"none\" stroke-width=\"0\" fill=\"none\" \/>\r\n\t<rect id=\"bg_frame\" oryx:resize=\"vertical horizontal\" x=\"0\" y=\"0\" width=\"100\" height=\"80\" rx=\"10\" ry=\"10\" stroke=\"#bbbbbb\" stroke-width=\"1\" fill=\"#f9f9f9\" \/>\r\n\t\t<text \r\n\t\t\tfont-size=\"12\" \r\n\t\t\tid=\"text_name\" \r\n\t\t\tx=\"50\" \r\n\t\t\ty=\"40\" \r\n\t\t\toryx:align=\"middle center\"\r\n\t\t\toryx:fittoelem=\"text_frame\"\r\n\t\t\tstroke=\"#373e48\">\r\n\t\t<\/text>\r\n    \r\n\t<g id=\"camelTask\" transform=\"translate(4,4)\">\r\n      <svg width=\"15\" height=\"15\" viewBox=\"0 0 32 32\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\r\n<g clip-path=\"url(#clip0_5769_2442)\">\r\n<path d=\"M-0.000394819 16.5978C-0.000394819 14.1179 0.9856 12.7136 2.68868 12.0563C4.69055 11.2794 6.72229 10.5026 8.75404 9.78549C9.26198 9.60621 9.56076 9.30743 9.76991 8.79949C10.6065 6.67811 11.4132 4.52685 12.3694 2.43535C13.3852 0.0450568 16.1938 -0.642151 18.3152 0.762144C19.1219 1.29996 19.5701 2.04692 19.9286 2.9134C20.7055 4.82564 21.4823 6.76775 22.2293 8.67998C22.4683 9.27755 22.8269 9.60621 23.3946 9.84524C25.4861 10.652 27.5776 11.4587 29.6093 12.355C31.9697 13.4008 32.7167 16.2393 31.2825 18.3606C30.7148 19.1973 29.8782 19.6753 28.952 20.0339C27.0398 20.7808 25.1574 21.5577 23.2452 22.3046C22.7372 22.5138 22.4384 22.7827 22.2293 23.2906C21.3927 25.4419 20.586 27.5633 19.6597 29.6846C18.614 32.0152 15.8652 32.7621 13.7139 31.3877C12.9968 30.9097 12.4889 30.2523 12.1901 29.4755C11.3535 27.4139 10.5169 25.3821 9.71016 23.3205C9.50101 22.7827 9.20222 22.454 8.6644 22.2449C6.66254 21.4381 4.69055 20.5717 2.68868 19.7351C0.9856 19.018 -0.000394819 17.7631 -0.0302734 16.5679L-0.000394819 16.5978Z\" fill=\"#FC7500\"\/>\r\n<\/g>\r\n<defs>\r\n<clipPath id=\"clip0_5769_2442\">\r\n<rect width=\"32\" height=\"32.0299\" fill=\"white\" transform=\"translate(0 0.045166)\"\/>\r\n<\/clipPath>\r\n<\/defs>\r\n<\/svg>\r\n    <\/g>\r\n\t\r\n\t<g id=\"parallel\">\r\n\t\t<path oryx:anchors=\"bottom\" fill=\"none\" stroke=\"#bbbbbb\" d=\"M46 70 v8 M50 70 v8 M54 70 v8\" stroke-width=\"2\" \/>\r\n\t<\/g>\r\n\t\r\n\t<g id=\"sequential\">\r\n\t\t<path oryx:anchors=\"bottom\" fill=\"none\" stroke=\"#bbbbbb\" stroke-width=\"2\" d=\"M46,76h10M46,72h10 M46,68h10\"\/>\r\n\t<\/g>\r\n\r\n\t<g id=\"compensation\">\r\n\t\t<path oryx:anchors=\"bottom\" fill=\"none\" stroke=\"#bbbbbb\" d=\"M 62 74 L 66 70 L 66 78 L 62 74 L 62 70 L 58 74 L 62 78 L 62 74\" stroke-width=\"1\" \/>\r\n\t<\/g>\r\n  <\/g>\r\n<\/svg>",
     "icon" : "activity/list/type.g4_custom.png",
     "groups" : [ "BPMN.STENCILS.GROUPS.ACTIVITIES" ],
-    "propertyPackages" : [ "overrideidpackage", "namepackage", "documentationpackage", "asynchronousdefinitionpackage", "exclusivedefinitionpackage", "executionlistenerspackage", "skipexpressionpackage", "g4customtaskjobidpackage"],
+    "propertyPackages" : [ "overrideidpackage", "namepackage", "documentationpackage", "asynchronousdefinitionpackage", "exclusivedefinitionpackage", "executionlistenerspackage", "skipexpressionpackage", "g4customtaskjobidpackage", "g4customtaskjobidvariablepackage"],
     "hiddenPropertyPackages" : [ ],
     "roles" : [ "Activity", "sequence_start", "sequence_end", "ActivitiesMorph", "all" ]
   }, {

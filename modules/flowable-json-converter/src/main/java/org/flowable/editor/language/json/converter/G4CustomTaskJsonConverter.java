@@ -39,7 +39,8 @@ public class G4CustomTaskJsonConverter extends BaseBpmnJsonConverter {
                                                BpmnJsonConverterContext converterContext) {
         ServiceTask task = new ServiceTask();
         task.setType("g4-custom");
-        addField("jobId", PROPERTY_G4CUSTOM_TASK_JOB_ID, elementNode, task);
+        addField(PROPERTY_G4CUSTOM_TASK_JOB_ID, PROPERTY_G4CUSTOM_TASK_JOB_ID, elementNode, task);
+        addField(PROPERTY_G4CUSTOM_TASK_JOB_ID_VARIABLE, PROPERTY_G4CUSTOM_TASK_JOB_ID_VARIABLE, elementNode, task);
         return task;
     }
 
