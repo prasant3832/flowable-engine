@@ -65,8 +65,8 @@ public interface Problems {
 
     String G4_CUSTOM_TASK_NO_JOB_ID = "flowable-g4-custom-task-no-job-id";
     String G4_CUSTOM_TASK_NO_JOB_ID_VARIABLE = "flowable-g4-custom-task-no-job-id-VARIABLE";
-    String PROPERTY_G4CUSTOM_TASK_JOB_ID = "g4CustomTaskJobId";
-    String PROPERTY_G4CUSTOM_TASK_JOB_ID_VARIABLE = "g4CustomTaskJobIdVariable";
+    String PROPERTY_G4CUSTOM_TASK_JOB_ID = "g4customtaskjobid";
+    String PROPERTY_G4CUSTOM_TASK_JOB_ID_VARIABLE = "g4customtaskjobidvariable";
     
     String CASE_TASK_NO_CASE_DEFINITION_KEY = "flowable-casetask-no-case-definition-key";
     

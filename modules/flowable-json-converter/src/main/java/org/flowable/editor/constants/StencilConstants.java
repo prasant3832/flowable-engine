@@ -325,8 +325,8 @@ public interface StencilConstants {
     final String PROPERTY_DECISION_REFERENCE_TYPE = "decisionReferenceType";
 
 
-    String PROPERTY_G4CUSTOM_TASK_JOB_ID = "g4CustomTaskJobId";
-    String PROPERTY_G4CUSTOM_TASK_JOB_ID_VARIABLE = "g4CustomTaskJobIdVariable";
+    String PROPERTY_G4CUSTOM_TASK_JOB_ID = "g4customtaskjobid";
+    String PROPERTY_G4CUSTOM_TASK_JOB_ID_VARIABLE = "g4customtaskjobidvariable";
 
     final String PROPERTY_HTTPTASK_REQ_METHOD = "httptaskrequestmethod";
     final String PROPERTY_HTTPTASK_REQ_URL = "httptaskrequesturl";
